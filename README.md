@@ -1,2 +1,3 @@
 # Python
-Python Codes for Practice from IIM AMRITSAR DSBA02 BATCH
+This code is a number guessing game.
+This can be run in manual aur automated mode. It maintains a score_board for all successes, either by computer or any user.
