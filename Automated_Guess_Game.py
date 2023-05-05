@@ -1,27 +1,25 @@
 #######################################################################################################
-# Assignment        : Guess the Number Game                                                           #
+# Assignment        : Guess the Number Game  (Automation Included)                                    #
 # Group Members     : Srishti, Kumar Satyajit, Vinay Sharma                                           #
 # Submission Date   : 05-May-2023                                                                     #
-# IIM AMRITSAR DSBA02                                                                                 #
+# DSBA02                                                                                              #
 #######################################################################################################
 
 '''
 This code runs in Manual mode or Auto mode. Please follow onscreen instruction.
-This will create score_board.txt file, so you should have permissions to create the file in the current
+This will create scoreboard.txt file, so you should have permissions to create the file in the current
 working directory
 '''
 
 import random
 import time
-import os
 from datetime import datetime
 
 #Function to generate the fun message
 def gen_msg():
     message = ['Come on you can do it!', 'Alas! This is not correct', 'Do you need coffee?',
-               'O Boy, Come on, you are very close', 'Don''t Lose hope, you can try more', 'Chat GPT can''t beat me']
+               'O Boy, Come on, you are very close', 'Don''t Lose hope, you can try more', 'Chat GPT can''t beat me','Let me know if you are sleepy!']
     idx = random.randint(0, len(message)-1)
-    #print(idx)
     adv_msg = message[idx]
     return adv_msg
 
@@ -29,7 +27,7 @@ def score_board(attempts,usr):
     now = datetime.now()
     current_time = now.strftime('%d-%m-%y %H:%M:%S')
     file1 = open('scoreboard.txt', 'a')
-    file1.writelines(f"{current_time } :          {usr}                     : {attempts}\n")
+    file1.writelines(f"{current_time} :          {usr}                : {attempts}\n")
 
 #Function to print the score board after each win!
 def print_score():
@@ -53,7 +51,6 @@ def play_again():
 
 #Function to generate the guessing number
 def guess_the_number():
-    Flag = True
     secret_number = random.randint(1, 20)
     attempts = 6
 
