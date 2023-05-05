@@ -42,6 +42,7 @@ def print_score():
     print("+------------------------------------------------------------+")
     print(content)
 
+#If User wants to play again or not, this function will return the Flag accordingly
 def play_again():
     play_again = input("Do you want to play again? (y/n) ")
     if play_again.lower() != 'y':
@@ -50,6 +51,7 @@ def play_again():
         Flag = True
     return Flag
 
+#Function to generate the guessing number
 def guess_the_number():
     Flag = True
     secret_number = random.randint(1, 20)
@@ -89,6 +91,7 @@ def guess_the_number():
 
 
         attempts -= 1
+        # This is to ensure that the game exits once all attempts are exhausted and prints relevant message
         if attempts == 0:
             print("\nGame over! The computer ran out of attempts.")
             print("The secret number was:", secret_number)
@@ -97,6 +100,8 @@ def guess_the_number():
         time.sleep(1)
 
 Flag = True
+
+#This is the main loop where the game starts according to the Flag
 while Flag:
     guess_the_number()
     Flag = play_again()
