@@ -2,7 +2,7 @@
 # Assignment        : Guess the Number Game                                                           #
 # Group Members     : Srishti, Kumar Satyajit, Vinay Sharma                                           #
 # Submission Date   : 05-May-2023                                                                     #
-# DSBA02                                                                                              #
+# IIM AMRITSAR DSBA02                                                                                 #
 #######################################################################################################
 
 '''
